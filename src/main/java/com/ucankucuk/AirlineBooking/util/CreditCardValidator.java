@@ -13,7 +13,8 @@ public class CreditCardValidator {
         if (creditCardNumber.length() != 16) {
             throw new IllegalArgumentException("Wrong CreditCardNumber !");
         }
-        return creditCardNumber;
+
+        return creditCardNumber.substring(0,4)+"********" + creditCardNumber.substring(12);
     }
 
 }
